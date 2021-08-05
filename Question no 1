@@ -1,0 +1,36 @@
+def traverseSpiral(matrix, r, c):
+	d = 0
+	m = 0
+
+	while (d < r and m < c):
+
+		for i in range(m, c):
+			print(matrix[d][i], end=" ")
+
+		d += 1
+
+		for i in range(d, r):
+			print(matrix[i][c - 1], end=" ")
+
+		c -= 1
+
+		if (d < r):
+
+			for i in range(c - 1, (m - 1), -1):
+				print(matrix[r - 1][i], end=" ")
+
+			r -= 1
+
+		if (m < c):
+			for i in range(r - 1, d - 1, -1):
+				print(matrix[i][m], end=" ")
+
+			m += 1
+
+matrix = [[1, 2, 3, 4],
+	[5, 6, 7, 8],
+	[9, 10, 11, 12],
+    [13, 14, 15, 16]]
+    
+R = 4
+C = 4
