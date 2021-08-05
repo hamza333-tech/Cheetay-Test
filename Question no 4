@@ -1,31 +1,31 @@
-def candyStoreMin(arr, n, k):
+def candyStoreMin(array, size, k):
      
     cost = 0
     i = 0
-    while(n):
-        cost += arr[i]
-        n = n-k
+    while(size):
+        cost += array[i]
+        size = size-k
         i += 1
     return cost
  
-def candyStoreMax(arr, n, k):
+def candyStoreMax(array, size, k):
  
     cost = 0
     index = 0
-    i = n-1
+    i = size-1
     while(i >= index):
  
-        cost += arr[i]
+        cost += array[i]
 
         index += k
         i -= 1
  
     return cost
 
-arr = [3, 2, 1, 4]
-n = len(arr)
+array = [3, 2, 1, 4]
+size = len(array)
 k = 2 
-arr.sort()
+array.sort()
 
-print(candyStoreMin(arr, n, k), " ",
-      candyStoreMax(arr, n, k))
+print(candyStoreMin(array, size, k), " ",
+      candyStoreMax(array, size, k))
